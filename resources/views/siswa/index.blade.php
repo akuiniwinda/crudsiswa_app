@@ -13,18 +13,18 @@
     <table border="1px">
         <thead>
             <tr>
+                <th>Poto</th>
                 <th>Nama</th>
-                <th>Nisn</th>
-                <th>Email</th>
+                <th>Kelas</th>
                 <th>Alamat</th>
                 <th>Opsi</th>
             </tr>
         </thead>
         <tbody>
             <tr>
+                <td>Photo.file</td>
                 <td>Raiz</td>
-                <td>123</td>
-                <td>raiz12553@gmail.com</td>
+                <td>XII PPLG 2</td>
                 <td>qatar</td>
                 <td>
                     <a href="">Edit</a>

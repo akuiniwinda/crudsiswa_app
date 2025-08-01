@@ -9,14 +9,15 @@
 <body>
     <h1>Tambah Data Siswa</h1>
     <p>Halaman Untuk menambah data siwa</p>
-    <form>
+    <form action="/siswa/store" method="POST">
+        @csrf
         <div>
             <label>Class Id</label>
             <br>
             <select name="kelas_id">
-                <option value="">XII PPLG 1</option>
-                <option value="">XII PPLG 2</option>
-                <option value="">XII PPLG 3</option>
+                <option value="1">XII PPLG 1</option>
+                <option value="2">XII PPLG 2</option>
+                <option value="3">XII PPLG 3</option>
             </select>
         </div>
         <br>
@@ -45,15 +46,15 @@
         </div>
         <br>
         <div>
-            <label>Nomor Telepon</label>
-            <br>
-            <input type="text" name="no_handphone">
-        </div>
-        <br>
-        <div>
             <label>Sandi</label>
             <br>
             <input type="password" name="password">
+        </div>
+        <br>
+        <div>
+            <label>Nomor Telepon</label>
+            <br>
+            <input type="tel" name="no_handphone">
         </div>
         <br>
         <div>
