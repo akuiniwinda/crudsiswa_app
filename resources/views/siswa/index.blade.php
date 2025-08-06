@@ -10,7 +10,7 @@
     <h1>Halaman Data Siswa</h1>
     <p>Data Siswa Jurusan PPLG</p>
     <a href="/siswa/create">Tambah data</a>
-    <table border="1px">
+    <table border="1px" style="width:100% height:20%">
         <thead>
             <tr>
                 <th>Poto</th>
@@ -21,17 +21,19 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($siswas as $siswa)
             <tr>
-                <td>Photo.file</td>
-                <td>Raiz</td>
-                <td>XII PPLG 2</td>
-                <td>qatar</td>
+                <td><img src="{{asset('storage/'.$siswa->photo)}}" alt="" align="center" width="100"></td>
+                <td>{{$siswa->name}}</td>
+                <td>{{$siswa->clas->name}}</td>
+                <td>{{$siswa->alamat}}</td>
                 <td>
                     <a href="">Edit</a>
                     <a href="">Detail</a>
                     <a href="">Delete</a>
                 </td>
             </tr>
+            @endforeach
         </tbody>
     </table>
 </body>
