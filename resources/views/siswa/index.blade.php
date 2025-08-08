@@ -29,7 +29,7 @@
                 <td>{{$siswa->alamat}}</td>
                 <td>
                     <a href="">Edit</a>
-                    <a href="">Detail</a>
+                    <a href="/siswa/show/{{$siswa->id}}">Detail</a>
                     <a onclick="return confirm('yang bener?')" href="/siswa/delete/{{$siswa->id}}">Delete</a>
                 </td>
             </tr>
