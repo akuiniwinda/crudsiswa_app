@@ -73,4 +73,35 @@ class SiswaController extends Controller
         //kembalikan user ke halaman home atau beranda
         return redirect('/');
     }
+
+    //untuk menampilkan view detail siswa
+    public function show($id){
+        //cari ke tabel user di database sesuai atau berdasarkan id user ada atau tidak
+        $datauser = User::find($id);
+
+        //cek apakah datanya ada atau tidak
+        if($datauser == null){
+            return redirect('/');
+        }
+
+        //kembalikan user ke halaman show dan kembalikan data user yang di ambil
+
+        return view('siswa.show', compact('datauser'));
+    }
+
+    public function edit($id){
+        //siapkan data atau panggil kelas
+        $clases = Clas::all();
+
+        //amabil data user atau siswa di tabel user berdasar kan id
+        $datauser = User::find($id);
+
+        //cek apakah datanya ada atau tidak
+        if($datauser == null){
+            return redirect('/');
+        }
+
+        return view('siswa.edit', compact('clases', 'datauser'));
+
+    }
 }
