@@ -10,7 +10,7 @@
     <h1>Edit Data Siswa</h1>
     <p>Halaman Untuk mengedit data siwa</p>
     <img width="70" src="{{asset('storage/'.$datauser->photo)}}" alt="">
-    <form action="/siswa/edit" method="POST" enctype="multipart/form-data">
+    <form action="/siswa/update/{{$datauser->id}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div>
             <label>Class Id</label>
