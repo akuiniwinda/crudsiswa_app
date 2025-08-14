@@ -111,6 +111,9 @@
 <body>
     <h1>Halaman Data Siswa</h1>
     <p>Data Siswa Jurusan PPLG</p>
+    <br>
+    <a href="/clas">Menu Kelas</a>
+    <br>
     <a href="/siswa/create">Tambah data</a>
     <table border="1px" style="width:100% height:20%">
         <thead>
